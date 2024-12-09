@@ -1,10 +1,10 @@
 ---
 items:
   - text: Home
-    url: "#"
+    url: "/"
   - text: About
     url: "/about"
   - text: Contact
     url: "/contact"
   - text: Vehicles
-    url: "/blog"
+    url: "/vehicles"
