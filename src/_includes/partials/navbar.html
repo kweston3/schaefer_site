@@ -5,12 +5,12 @@
     @keydown.escape="isOpen = false"
     @click.away="isOpen = false"
   >
-    <!--Logo etc-->
+    <!-- Logo -->
     <div class="flex items-center">
       <a href="/" class="text-indigo-500 font-bold text-lg"> Logo</a>
     </div>
 
-    <!--Toggle button (hidden on large screens)-->
+    <!-- Toggle button (hidden on large screens) -->
     <button
       @click="isOpen = !isOpen"
       type="button"
@@ -32,34 +32,44 @@
         <path
           x-show="!isOpen"
           fill-rule="evenodd"
-          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"
         />
       </svg>
     </button>
 
-    <!--Menu-->
+    <!-- Menu -->
     <div
       class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center"
       :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
       x-show.transition="true"
     >
       {% if navigation.items %}
-
       <ul
         class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
       >
         {% for item in navigation.items %}
         <li class="nav__item mr-3">
+          {% if loop.last %}
+          <!-- Last item as a button -->
+          <a
+            @click="isOpen = false"
+            class="inline-block bg-indigo-500 text-white font-bold py-2 px-4 rounded hover:bg-indigo-600"
+            href="{{ item.url }}"
+          >
+            {{ item.text }}
+          </a>
+          {% else %}
           <a
             @click="isOpen = false"
             class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4"
             href="{{ item.url }}"
-            >{{ item.text }}</a
           >
+            {{ item.text }}
+          </a>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
-
       {% endif %}
     </div>
   </nav>
