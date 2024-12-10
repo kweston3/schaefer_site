@@ -11,8 +11,6 @@ tags: second-tag
 ---
 <img src="/static/img/hero-background.jpg" alt="Hero Background" style="width: 100%; height: 500px; object-fit: contain;">
 
-![](/static/img/hero-background.jpg)
-
 H﻿ello There!
 
 Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
