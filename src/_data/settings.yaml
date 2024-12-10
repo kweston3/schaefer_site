@@ -1,6 +1,61 @@
 ---
-name: Luxury SUV
-author: Caleb Schaefer
-url: "https://surjithctly.in/"
-description: "A top-notch luxury SUV with all the modern amenities."
+name: "Schaefer Auto"
+author: "Caleb Schaefer"
+url: "https://schaeferauto.com/"
+description: "Your trusted auto dealership for luxury SUVs and more."
 image: "static/img/luxury-suv.svg"
+
+hero:
+  title: "Welcome to {{ name }}"
+  subtitle: "Your trusted auto dealership for new and pre-owned vehicles."
+  cta:
+    - text: "View Inventory"
+      url: "/inventory"
+    - text: "Contact Us"
+      url: "/contact"
+  background_image: "/static/img/hero-background1.jpg"
+
+featured_inventory:
+  - name: "2023 Toyota Corolla"
+    price: "$20,000"
+    image: "/static/img/toyota-corolla.jpg"
+    url: "/inventory/toyota-corolla"
+  - name: "2022 Ford F-150"
+    price: "$35,000"
+    image: "/static/img/ford-f150.jpg"
+    url: "/inventory/ford-f150"
+  - name: "2023 Tesla Model 3"
+    price: "$50,000"
+    image: "/static/img/tesla-model-3.jpg"
+    url: "/inventory/tesla-model-3"
+  - name: "2021 Honda Civic"
+    price: "$22,000"
+    image: "/static/img/honda-civic.jpg"
+    url: "/inventory/honda-civic"
+  - name: "2022 Chevrolet Silverado"
+    price: "$45,000"
+    image: "/static/img/chevrolet-silverado.jpg"
+    url: "/inventory/chevrolet-silverado"
+  - name: "2024 BMW 3 Series"
+    price: "$40,000"
+    image: "/static/img/bmw-3-series.jpg"
+    url: "/inventory/bmw-3-series"
+
+services:
+  - title: "Financing Assistance"
+    description: "We offer competitive financing options for all credit levels."
+    url: "/services/financing"
+  - title: "Trade-In Evaluation"
+    description: "Get the best value for your trade-in vehicle."
+    url: "/services/trade-in"
+  - title: "Vehicle Maintenance"
+    description: "Comprehensive maintenance services to keep your car running."
+    url: "/services/maintenance"
+
+testimonials:
+  - content: "Great customer service and amazing deals!"
+    author: "Jane Doe"
+  - content: "Highly recommend! Found my dream car here."
+    author: "John Smith"
+  - content: "The process was so smooth, and the staff were very helpful!"
+    author: "Emily Davis"
