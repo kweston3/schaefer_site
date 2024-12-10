@@ -5,13 +5,12 @@ description: Capitalize on low hanging fruit to identify a ballpark value added
   clickthroughs from DevOps.
 author: Caleb Schaefer
 date: 2020-09-01
-image: "/static/img/hero-background.jpg"
+image: /static/img/hero-background.jpg
 tags:
   - left
   - center
   - right
 ---
-
 # This is a Heading h1
 
 ## This is a Heading h2
@@ -20,23 +19,23 @@ tags:
 
 ## Emphasis
 
-_This text will be italic_\
-_This will also be italic_
+*This text will be italic*\
+*This will also be italic*
 
 **This text will be bold**\
 **This will also be bold**
 
-_You **can** combine them_
+*You **can** combine them*
 
 ## Lists
 
 ### Unordered
 
-- Item 1
-- Item 2
+* Item 1
+* Item 2
 
-  - Item 2a
-  - Item 2b
+  * Item 2a
+  * Item 2b
 
 ### Ordered
 
@@ -60,3 +59,7 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 ## Inline code
 
 This web site is using `markedjs/marked`.
+
+
+
+<img src="/static/img/hero-background.jpg" alt="Hero Background" style="width: 100%; height: 500px; object-fit: contain;">
