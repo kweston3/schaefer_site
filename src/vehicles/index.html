@@ -3,39 +3,38 @@ layout: vehicles
 ---
 
 <section class="mt-15">
-  {% set postslist = collections.post %} {% for post in postslist | reverse %}
-  <article class="my-8 flex items-start gap-6">
-    {% if post.data.image %}
-    <img
-      src="{{ post.data.image }}"
-      alt="{{ post.data.title | default('Vehicle Image') }}"
-      class="w-1/4 object-cover rounded-md shadow-md"
-    />
-    {% endif %}
-    <div class="flex-1">
-      <h2 class="font-bold text-3xl text-gray-900 mb-2">
-        <a href="{{ post.url | url }}">
-          {{ post.data.title | default('Untitled') }}
-        </a>
-      </h2>
-      <p class="text-base leading-6 text-gray-500 mb-3">
-        <time>
-          {{ post.date | readableDate }} by
-          <a>{{ post.data.author }}</a>
-        </time>
-      </p>
-      {% if post.data.description %}
-      <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+    <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+      {% if post.data.image %}
+      <img
+        src="{{ post.data.image }}"
+        alt="{{ post.data.title | default('Vehicle Image') }}"
+        class="w-full h-48 object-contain"
+      />
       {% endif %}
-      <p>
-        <a
-          href="{{ post.url | url }}"
-          class="text-indigo-500 font-bold text-lg"
-        >
-          Read more →
-        </a>
-      </p>
+      <div class="p-4">
+        <h3 class="font-semibold text-lg">
+          <a href="{{ post.url | url }}">
+            {{ post.data.title | default('Untitled') }}
+          </a>
+        </h3>
+        <p class="text-base leading-6 text-gray-500 mb-3">
+          <time>{{ post.date | readableDate }} </time>
+        </p>
+        {% if post.data.description %}
+        <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
+        {% endif %}
+        <p>
+          <a
+            href="{{ post.url | url }}"
+            class="text-indigo-500 font-bold text-lg"
+          >
+            Read more →
+          </a>
+        </p>
+      </div>
     </div>
-  </article>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </section>

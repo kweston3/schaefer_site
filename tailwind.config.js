@@ -1,11 +1,13 @@
-// tailwind.config.js
 module.exports = {
   content: [
-    "./src/**/*.{html,js,jsx,ts,tsx}", // Scan source files
-    "./_site/**/*.{html,js,jsx,ts,tsx}", // Scan generated HTML in _site
+    "./src/**/*.html", // All HTML files in 'src' folder
+    "./_site/**/*.html", // All HTML files in '_site' folder
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
