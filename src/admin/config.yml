@@ -24,6 +24,7 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Details", name: "details", widget: "markdown" }
       - { label: "Location", name: "location", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
       - widget: select
         label: "tags"
         name: "tags"
