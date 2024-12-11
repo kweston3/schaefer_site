@@ -1,13 +1,19 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full bg-white z-20">
+<div class="lg:fixed top-0 w-full bg-white z-20">
   <nav
-    class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto bg-white"
+    class="flex items-center justify-center lg:justify-between flex-wrap p-4 lg:px-0 container mx-auto bg-white"
     x-data="{ isOpen: false }"
     @keydown.escape="isOpen = false"
     @click.away="isOpen = false"
   >
     <!-- Logo -->
     <div class="flex items-center">
-      <a href="/" class="text-indigo-500 font-bold text-lg"> Logo</a>
+      <a href="/">
+        <img
+          src="../../static/img/schaefer-auto1.png"
+          alt="Schaefer Auto"
+          class="h-16 lg:h-20"
+        />
+      </a>
     </div>
 
     <!-- Toggle button (hidden on large screens) -->
@@ -45,7 +51,7 @@
     >
       {% if navigation.items %}
       <ul
-        class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
+        class="pt-4 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
       >
         {% for item in navigation.items %}
         <li class="nav__item mr-3">
@@ -61,7 +67,7 @@
           {% else %}
           <a
             @click="isOpen = false"
-            class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4"
+            class="text-ml inline-block no-underline py-2 px-4 hover:text-indigo-500 {% if item.url == current_url %}text-indigo-500 font-bold{% else %}text-gray-500{% endif %}"
             href="{{ item.url }}"
           >
             {{ item.text }}
