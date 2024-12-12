@@ -13,9 +13,7 @@ path: home
     <!-- Blue overlay -->
     <div class="absolute inset-0 bg-blue-500 opacity-50"></div>
     <div class="relative z-10 px-4 md:px-0">
-      <h1 class="text-4xl md:text-6xl font-bold text-white">
-        {{ settings.name }}
-      </h1>
+      <h1 class="text-white">{{ settings.name }}</h1>
       <p class="mt-4 text-lg md:text-xl text-white">
         {{ settings.hero.subtitle }}
       </p>
@@ -109,25 +107,23 @@ path: home
   </section>
 
   <!-- About Section -->
-  <section class="my-20 bg-gray-100 p-8 rounded-lg">
-    <h2 class="text-2xl md:text-4xl font-bold text-center">About Us</h2>
-    <p class="text-center mt-2">
-      Learn more about our team and what drives us.
-    </p>
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="flex flex-col">
-        <h3 class="text-xl md:text-2xl font-semibold">Our Mission</h3>
+  <section class="my-20 bg-gray-100 p-8">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="flex flex-col justify-center">
+        <h2>About Us</h2>
         <p class="mt-4 text-gray-700">
-          We are a dedicated team committed to providing exceptional service to
-          our customers. Our goal is to make your car-buying experience seamless
-          and enjoyable. From personalized customer support to offering a wide
-          variety of high-quality vehicles, we’re here to help you every step of
-          the way.
+          Located in Lomira, Wisconsin, Schaefer Auto is a used vehicle
+          dealership. It has become our mission to provide reliable vehicles for
+          a price point you cannot beat. We take pride in providing a wide
+          variety of vehicles with ranging makes, models, years, and mileage to
+          ensure you leave with a vehicle to fit both your needs and budget. If
+          you are not seeing the vehicle you had in mind, don’t worry. We will
+          work with you to provide exactly what you are looking for.
         </p>
       </div>
       <div class="flex justify-center items-center">
         <img
-          src="{{ settings.about.team_photo }}"
+          src="./static/img/about/schaefer-auto10.jpeg"
           alt="Our Team"
           class="w-full h-96 object-cover rounded-lg shadow-lg"
         />
