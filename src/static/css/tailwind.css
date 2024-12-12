@@ -5,7 +5,8 @@
 /*Your Custom CSS Goes here*/
 @layer base {
   body {
-    @apply lg:mt-28; /* Adjust this value to match your navbar height */
+    font-family: "Roboto", sans-serif;
+    @apply lg:mt-28;
   }
 }
 
