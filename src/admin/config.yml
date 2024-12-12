@@ -24,12 +24,7 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Details", name: "details", widget: "markdown" }
       - { label: "Location", name: "location", widget: "string" }
-      - {
-          label: "Image",
-          name: "image",
-          widget: "imageWithValidation",
-          required: true,
-        } # Updated to use custom widget
+      - { label: "Image", name: "image", widget: "image", required: true }
       - widget: select
         label: "tags"
         name: "tags"
