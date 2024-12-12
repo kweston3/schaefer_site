@@ -7,7 +7,7 @@ path: home
 <div class="w-full px-0 mx-0">
   <!-- Hero Section -->
   <section
-    class="flex flex-col justify-center items-center text-center relative w-full h-[400px] md:h-[650px] bg-cover bg-center"
+    class="flex flex-col justify-center items-center text-center relative w-full h-[400px] md:h-[600px] bg-cover bg-center"
     style="background-image: url('{{ settings.hero.background_image }}');"
   >
     <!-- Blue overlay -->
@@ -32,13 +32,11 @@ path: home
   </section>
 
   <!-- Featured Inventory Section -->
-  <section class="container mt-12 px-6">
-    <h2 class="text-2xl md:text-4xl font-bold text-center">
-      Featured Inventory
-    </h2>
-    <p class="text-center mt-2">Check out our top picks for this month.</p>
+  <section class="container my-16 px-6">
+    <h2 class="text-2xl md:text-4xl font-bold text-left">Featured Inventory</h2>
+    <p class="text-left mt-2">Check out our top picks for this month.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}
+      {% for post in collections.post | reverse %} {% if loop.index <= 6 %}
       <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
         {% if post.data.image %}
         <img
@@ -54,7 +52,7 @@ path: home
             </a>
           </h3>
           <p class="text-base leading-6 text-gray-500 mb-3">
-            <time>{{ post.date | readableDate }} </time>
+            <time>{{ post.date | readableDate }}</time>
           </p>
           {% if post.data.description %}
           <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
@@ -69,12 +67,12 @@ path: home
           </p>
         </div>
       </div>
-      {% endfor %}
+      {% endif %} {% endfor %}
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="my-12 bg-gray-50 p-8 rounded-lg">
+  <section class="my-20 bg-gray-50 p-8 rounded-lg">
     <h2 class="text-2xl md:text-4xl font-bold text-center">Our Services</h2>
     <p class="text-center mt-2">
       From financing to vehicle maintenance, we’ve got you covered.
@@ -95,7 +93,7 @@ path: home
   </section>
 
   <!-- Testimonials Section -->
-  <section class="my-12 mx-8">
+  <section class="my-20 mx-8">
     <h2 class="text-2xl md:text-4xl font-bold text-center">
       What Our Customers Say
     </h2>
@@ -111,13 +109,13 @@ path: home
   </section>
 
   <!-- About Section -->
-  <section class="my-12 mx-8 bg-gray-100 p-8 rounded-lg">
+  <section class="my-20 bg-gray-100 p-8 rounded-lg">
     <h2 class="text-2xl md:text-4xl font-bold text-center">About Us</h2>
     <p class="text-center mt-2">
       Learn more about our team and what drives us.
     </p>
     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="flex flex-col justify-center">
+      <div class="flex flex-col">
         <h3 class="text-xl md:text-2xl font-semibold">Our Mission</h3>
         <p class="mt-4 text-gray-700">
           We are a dedicated team committed to providing exceptional service to
@@ -131,92 +129,116 @@ path: home
         <img
           src="{{ settings.about.team_photo }}"
           alt="Our Team"
-          class="w-full h-64 object-cover rounded-lg shadow-lg"
+          class="w-full h-96 object-cover rounded-lg shadow-lg"
         />
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="my-12 mx-8 bg-white p-8 rounded-lg">
-    <h2 class="text-2xl md:text-4xl font-bold text-center">Contact Us</h2>
-    <p class="text-center mt-2">
-      We'd love to hear from you. Fill out the form below to get in touch!
-    </p>
-    <form
-      method="POST"
-      action="/thank-you"
-      netlify
-      class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6"
-    >
-      <!-- Name Field -->
-      <div class="col-span-1 md:col-span-2">
-        <label for="name" class="block text-gray-700 font-semibold"
-          >Your Name</label
-        >
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          placeholder="John Doe"
-          class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-        />
+  <section
+    class="my-20 container px-6 bg-white grid grid-cols-1 md:grid-cols-8 gap-16"
+  >
+    <!-- Left Side: Contact Info -->
+    <div class="flex flex-col col-span-4">
+      <h2 class="text-2xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-gray-600 mb-8">
+        Reach out to us directly or use the form to send us a message. We’d love
+        to hear from you!
+      </p>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold">Phone</h3>
+          <p class="text-gray-700">(555) 555-5555</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Email</h3>
+          <p class="text-gray-700">contact@example.com</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Location</h3>
+          <p class="text-gray-700">123 Main Street, Hometown, USA</p>
+        </div>
       </div>
+    </div>
 
-      <!-- Email Field -->
-      <div class="col-span-1">
-        <label for="email" class="block text-gray-700 font-semibold"
-          >Your Email</label
-        >
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="you@example.com"
-          class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+    <!-- Right Side: Contact Form -->
+    <div class="bg-gray-100 p-10 rounded-lg shadow-md col-span-4">
+      <form
+        method="POST"
+        action="/thank-you"
+        netlify
+        class="grid grid-cols-1 gap-4"
+      >
+        <!-- Name Field -->
+        <div>
+          <label for="name" class="block text-gray-700 font-semibold"
+            >Your Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="John Doe"
+            class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
 
-      <!-- Phone Field -->
-      <div class="col-span-1">
-        <label for="phone" class="block text-gray-700 font-semibold"
-          >Your Phone</label
-        >
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="(555) 555-5555"
-          class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+        <!-- Email Field -->
+        <div>
+          <label for="email" class="block text-gray-700 font-semibold"
+            >Your Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+            class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
 
-      <!-- Message Field -->
-      <div class="col-span-1 md:col-span-2">
-        <label for="message" class="block text-gray-700 font-semibold"
-          >Your Message</label
-        >
-        <textarea
-          id="message"
-          name="message"
-          required
-          rows="5"
-          placeholder="Type your message here..."
-          class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-        ></textarea>
-      </div>
+        <!-- Phone Field -->
+        <div>
+          <label for="phone" class="block text-gray-700 font-semibold"
+            >Your Phone</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="(555) 555-5555"
+            class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
 
-      <!-- Submit Button -->
-      <div class="col-span-1 md:col-span-2 text-center">
-        <button
-          type="submit"
-          class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600"
-        >
-          Send Message
-        </button>
-      </div>
-    </form>
+        <!-- Message Field -->
+        <div>
+          <label for="message" class="block text-gray-700 font-semibold"
+            >Your Message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows="6"
+            placeholder="Type your message here..."
+            class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button
+            type="submit"
+            class="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
 </div>
