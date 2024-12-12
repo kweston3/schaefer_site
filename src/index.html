@@ -11,7 +11,7 @@ path: home
     style="background-image: url('{{ settings.hero.background_image }}');"
   >
     <!-- Blue overlay -->
-    <div class="absolute inset-0 bg-blue-500 opacity-50"></div>
+    <div class="absolute inset-0 bg-[#1E6CB0] opacity-50"></div>
     <div class="relative z-10 px-4 md:px-0">
       <h1 class="text-white">{{ settings.name }}</h1>
       <p class="mt-4 text-lg md:text-xl text-white">
@@ -21,7 +21,7 @@ path: home
         {% for button in settings.hero.cta %}
         <a
           href="{{ button.url }}"
-          class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          class="px-6 py-3 bg-[#1E6CB0] text-white rounded-lg hover:bg-blue-600"
           >{{ button.text }}</a
         >
         {% endfor %}
@@ -30,42 +30,11 @@ path: home
   </section>
 
   <!-- Featured Inventory Section -->
-  <section class="container my-16 px-6">
+  <section class="container my-12 px-6">
     <h2 class="text-2xl md:text-4xl font-bold text-left">Featured Inventory</h2>
-    <p class="text-left mt-2">Check out our top picks for this month.</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if loop.index <= 6 %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <img
-          src="{{ post.data.image }}"
-          alt="{{ post.data.title | default('Vehicle Image') }}"
-          class="w-full h-48 object-contain"
-        />
-        {% endif %}
-        <div class="p-4">
-          <h3 class="font-semibold text-lg">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <p class="text-base leading-6 text-gray-500 mb-3">
-            <time>{{ post.date | readableDate }}</time>
-          </p>
-          {% if post.data.description %}
-          <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-indigo-500 font-bold text-lg"
-            >
-              Read more →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
+    <p class="text-left mt-2">Check out our most recent vehicles.</p>
+    {% include "./_includes/partials/post-grid.html" %}
+
     </div>
   </section>
 
@@ -82,7 +51,7 @@ path: home
         <p class="text-gray-500 mt-2">{{ service.description }}</p>
         <a
           href="{{ service.url }}"
-          class="text-blue-500 hover:underline mt-2 inline-block"
+          class="text-[#1E6CB0] hover:underline mt-2 inline-block"
           >Learn More</a
         >
       </div>
@@ -221,7 +190,7 @@ path: home
             required
             rows="6"
             placeholder="Type your message here..."
-            class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#1E6CB0]"
           ></textarea>
         </div>
 
@@ -229,7 +198,7 @@ path: home
         <div class="text-center">
           <button
             type="submit"
-            class="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600"
+            class="px-8 py-4 bg-[#1E6CB0] text-white font-semibold rounded-lg hover:bg-blue-600"
           >
             Send Message
           </button>
