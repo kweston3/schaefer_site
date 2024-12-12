@@ -26,11 +26,11 @@ collections:
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Image", name: "image", widget: "image", required: true }
       - widget: select
-        label: "tags"
-        name: "tags"
+        label: "brand"
+        name: "brand"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["Ford", "Chevrolet", "Buick", "Jeep"]
   - label: "Settings"
     name: "settings"
     editor:

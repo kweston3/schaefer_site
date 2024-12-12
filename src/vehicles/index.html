@@ -3,10 +3,83 @@ layout: default
 title: Latest Vehicles
 ---
 
-<div class="container px-6">
+<div class="px-6">
   <h1 class="font-bold pt-12">{{ title }}</h1>
 
-  <section class="mt-15">
-    {% include "../_includes/partials/post-grid.html" %}
+  <!-- Featured Inventory Section -->
+  <section class="container my-8 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      {% for post in collections.post | reverse %} {% if loop.index <= 6 %}
+      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+        {% if post.data.image %}
+        <img
+          src="{{ post.data.image }}"
+          alt="{{ post.data.title | default('Vehicle Image') }}"
+          class="w-full h-48 object-cover"
+        />
+        {% endif %}
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">
+            <a href="{{ post.url | url }}">
+              {{ post.data.title | default('Untitled') }}
+            </a>
+          </h3>
+          <p class="text-base leading-6 text-gray-500 mb-3">
+            <time>{{ post.date | readableDate }}</time>
+          </p>
+          {% if post.data.description %}
+          <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
+          {% endif %}
+          <p>
+            <a
+              href="{{ post.url | url }}"
+              class="text-[#1E6CB0] font-bold text-lg"
+            >
+              Read more →
+            </a>
+          </p>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </section>
+
+  <section class="container my-8 px-6">
+    <h2 class="font-bold pt-12">Jeep</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      {% for post in collections.post | reverse %} {% if "Jeep" in
+      post.data.brand %}
+      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+        {% if post.data.image %}
+        <img
+          src="{{ post.data.image }}"
+          alt="{{ post.data.title | default('Vehicle Image') }}"
+          class="w-full h-48 object-cover"
+        />
+        {% endif %}
+        <div class="p-4">
+          <h3 class="font-semibold text-lg">
+            <a href="{{ post.url | url }}">
+              {{ post.data.title | default('Untitled') }}
+            </a>
+          </h3>
+          <p class="text-base leading-6 text-gray-500 mb-3">
+            <time>{{ post.date | readableDate }}</time>
+          </p>
+          {% if post.data.description %}
+          <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
+          {% endif %}
+          <p>
+            <a
+              href="{{ post.url | url }}"
+              class="text-[#1E6CB0] font-bold text-lg"
+            >
+              Read more →
+            </a>
+          </p>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
   </section>
 </div>
