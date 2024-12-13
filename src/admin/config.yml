@@ -25,12 +25,8 @@ collections:
       - { label: "Details", name: "details", widget: "markdown" }
       - { label: "Location", name: "location", widget: "string" }
       - { label: "Image", name: "image", widget: "image", required: true }
-      - widget: select
-        label: "brand"
-        name: "brand"
-        multiple: true
-        create: true
-        options: ["Ford", "Chevrolet", "Buick", "Jeep"]
+      - { label: "Price", name: "price", widget: "number", required: true }
+
   - label: "Settings"
     name: "settings"
     editor:

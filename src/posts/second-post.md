@@ -4,7 +4,7 @@ description: Bring to the table win-win survival strategies to ensure proactive 
 date: 2020-09-02
 author: Surjith S M
 image: "/static/img/hero-background.jpg"
-brand: ["Jeep"]
+price: 22092
 ---
 
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.

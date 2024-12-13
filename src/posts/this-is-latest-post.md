@@ -7,7 +7,7 @@ description: Bring to the table win-win survival strategies to ensure proactive
 author: Kaleb Weston
 date: 2020-09-23T15:13:13.021Z
 image: /static/img/hero-background.jpg
-brand: ["Jeep"]
+price: 4173
 ---
 
 <img src="/static/img/hero-background.jpg" alt="Hero Background" style="width: 100%; height: 500px; object-fit: contain;">

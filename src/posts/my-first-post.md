@@ -6,7 +6,7 @@ description: Capitalize on low hanging fruit to identify a ballpark value added
 author: Caleb Schaefer
 date: 2020-09-01
 image: /static/img/hero-background.jpg
-brand: ["Jeep"]
+price: 24111
 ---
 
 # This is a Heading h1
