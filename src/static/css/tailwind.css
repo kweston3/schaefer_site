@@ -11,7 +11,7 @@
 }
 
 h1 {
-  @apply text-4xl md:text-6xl tracking-tighter mb-3 text-center lg:text-7xl font-bold;
+  @apply text-4xl md:text-5xl tracking-tighter mb-3 text-center lg:text-6xl font-bold;
 }
 
 h2 {

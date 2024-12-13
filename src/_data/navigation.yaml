@@ -10,5 +10,5 @@ items:
     url: "/testimonials"
   - text: About
     url: "/about"
-  - text: Contact
+  - text: Contact Us
     url: "/contact"

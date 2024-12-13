@@ -1,19 +1,14 @@
 ---
-name: "Schaefer Auto"
+name: "Finding the right used vehicle for you!"
 author: "Caleb Schaefer"
 url: "https://schaeferauto.com/"
-description: "Your trusted auto dealership for luxury SUVs and more."
+description: "Your trusted auto dealership in Lomira, Wisconsin."
 image: "static/img/luxury-suv.svg"
 
 hero:
-  title: "Welcome to {{ name }}"
-  subtitle: "Your trusted auto dealership for new and pre-owned vehicles."
-  cta:
-    - text: "View Inventory"
-      url: "/inventory"
-    - text: "Contact Us"
-      url: "/contact"
-  background_image: "/static/img/hero-background1.jpg"
+  title: "Finding the right used vehicle for you!"
+  subtitle: "Based out of Lomira, Wisconsin, we work with you to find the perfect vehicle for you at an affordable price."
+  background_image: "/static/img/about/schaefer-auto10.jpeg"
 
 featured_inventory:
   - name: "2023 Toyota Corolla"
