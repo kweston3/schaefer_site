@@ -3,7 +3,7 @@ title: The ultimate vehicle to drive
 price: 20000
 miles: 184000
 date: 2024-12-13T19:11:23.133Z
-details: |-
+description: |-
   T﻿his vehicle is great!
 
   I﻿ve been driving it for years and it works well in the snow.
