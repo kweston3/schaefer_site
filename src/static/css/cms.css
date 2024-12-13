@@ -1,0 +1,100 @@
+/* General Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+.css-y7r3-AppHeader {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Navigation */
+.css-12b66la-AppHeaderContent {
+  width: 100%;
+}
+
+.css-12zz42a-AppHeaderNavList {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.css-12yqrwa-AppHeaderNavLink-AppHeaderButton-button {
+  display: inline-block;
+  padding: 10px 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .css-12zz42a-AppHeaderNavList {
+    display: none; /* Hide navigation */
+  }
+
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+/* Sidebar */
+.css-1gj57a0-SidebarContainer-card {
+  width: 250px;
+  padding: 10px;
+  background: #f8f8f8;
+}
+
+@media (max-width: 768px) {
+  .css-1gj57a0-SidebarContainer-card {
+    display: none; /* Collapse sidebar */
+  }
+}
+
+/* Main Content */
+.css-1f7nhiq-CollectionMain {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .css-1f7nhiq-CollectionMain {
+    padding: 5px;
+  }
+}
+
+/* Buttons */
+button {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* General Typography */
+h1 {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 18px;
+  }
+}
