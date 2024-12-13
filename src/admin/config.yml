@@ -20,10 +20,10 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Details", name: "details", widget: "markdown" }
       - { label: "Price", name: "price", widget: "number", required: true }
+      - { label: "Miles", name: "miles", widget: "number" }
+      - { label: "Date", name: "date", widget: "datetime" format: 'YYYY-MM-DD' }
+      - { label: "Description", name: "details", widget: "markdown" }
       - { label: "Image", name: "image", widget: "image", required: true }
 
   - label: "Settings"
