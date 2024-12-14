@@ -11,11 +11,11 @@ path: home
     style="background-image: url('./static/img/about/schaefer-auto10.jpeg');"
 >
     <!-- Blue overlay -->
-    <div class="absolute inset-0 bg-[#1E6CB0] opacity-50"></div>
+    <div class="absolute inset-0 bg-[#1E6CB0] opacity-60"></div>
     <div class="relative z-10 px-4 md:px-0">
-      <h1 class="text-white">Finding the right used vehicle for you!</h1>
+      <h1 class="text-white">Find the right used vehicle for you!</h1>
       <p class="mt-4 text-lg md:text-xl text-white">
-        Based out of Lomira, Wisconsin, we work with you to find the perfect vehicle for you at an affordable price.
+        Based out of Lomira, Wisconsin, we work with you to find the perfect vehicle at an affordable price.
       </p>
       <div class="mt-8 space-x-4">
         <!-- First Button: View Inventory (Solid Blue) -->
@@ -40,8 +40,8 @@ path: home
   <!-- Featured Inventory Section -->
 
 <section class="container my-12 px-6">
-  <h2 class="text-2xl md:text-4xl font-bold text-left">Featured Inventory</h2>
-  <p class="text-left mt-2">Check out our top picks for this month.</p>
+  <h2 class="text-left">Featured Inventory</h2>
+  <p class="text-left mt-2">Check out our latest vehicles.</p>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
     {% for post in collections.post | reverse %} {% if loop.index <= 6 %}
     <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
@@ -55,7 +55,7 @@ path: home
       </a>
       {% endif %}
       <div class="p-4">
-        <h3 class="font-semibold text-lg">
+        <h3>
           <a href="{{ post.url | url }}">
             {{ post.data.title | default('Untitled') }}
           </a>
@@ -71,7 +71,7 @@ path: home
             href="{{ post.url | url }}"
             class="text-[#1E6CB0] font-bold text-lg"
           >
-            Read more →
+            See details →
           </a>
         </p>
       </div>
@@ -91,7 +91,7 @@ path: home
 
   <!-- Services Section -->
   <section class="my-20 bg-[#1E6CB0] p-8 rounded-lg">
-    <h2 class="text-2xl md:text-4xl font-bold text-center text-white">
+    <h2 class="text-center text-white">
       Our Services
     </h2>
     <p class="text-center mt-2 text-white">
@@ -130,7 +130,7 @@ path: home
 
   <!-- Testimonials Section -->
   <section class="my-20 mx-8">
-    <h2 class="text-2xl md:text-4xl font-bold text-center">
+    <h2 class="text-center">
       What Our Customers Say
     </h2>
     <p class="text-center mt-2">Hear from satisfied customers.</p>
@@ -189,22 +189,22 @@ path: home
     <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Left Side: Contact Info -->
       <div class="flex flex-col">
-        <h2 class="text-2xl md:text-4xl font-bold mb-4">Get in Touch</h2>
+        <h2 class="mb-4">Get in Touch</h2>
         <p class="text-gray-600 mb-8">
           Reach out to us directly or use the form to send us a message. We’d
           love to hear from you!
         </p>
         <div class="space-y-6">
           <div>
-            <h3 class="text-lg font-semibold">Phone</h3>
+            <h3 class="text-gray-900">Phone</h3>
             <p class="text-gray-700">(555) 555-5555</p>
           </div>
           <div>
-            <h3 class="text-lg font-semibold">Email</h3>
+            <h3 class="text-gray-900">Email</h3>
             <p class="text-gray-700">contact@example.com</p>
           </div>
           <div>
-            <h3 class="text-lg font-semibold">Location</h3>
+            <h3 class="text-gray-900">Location</h3>
             <p class="text-gray-700">123 Main Street, Hometown, USA</p>
           </div>
         </div>
