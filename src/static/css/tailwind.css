@@ -22,6 +22,10 @@ h3 {
   @apply text-2xl font-bold mb-3 text-[#1E6CB0];
 }
 
+p {
+  @apply text-gray-500;
+}
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],

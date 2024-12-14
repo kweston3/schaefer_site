@@ -50,28 +50,32 @@ path: home
         <img
           src="{{ post.data.image }}"
           alt="{{ post.data.title | default('Vehicle Image') }}"
-          class="w-full h-48 object-cover"
+          class="w-full h-64 object-cover"
         />
       </a>
       {% endif %}
       <div class="p-4">
-        <h3>
+        <h3 class="mb-2">
           <a href="{{ post.url | url }}">
             {{ post.data.title | default('Untitled') }}
           </a>
         </h3>
-        <p class="text-base leading-6 text-gray-500 mb-3">
-          <time>{{ post.date | readableDate }}</time>
-        </p>
+        <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+          {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
+          {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
+        </div>
+        <div class="text-xs text-gray-500 mb-3 border-b pb-2">
+          {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
+        </div>
         {% if post.data.description %}
-        <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
+        <p class="mb-3">{{ post.data.description.split(' ').slice(0, 25).join(' ') }}..</p>
         {% endif %}
         <p>
           <a
             href="{{ post.url | url }}"
             class="text-[#1E6CB0] font-bold text-lg"
           >
-            See details →
+            See Details →
           </a>
         </p>
       </div>
