@@ -28,15 +28,17 @@ title: Vehicle Inventory
         </a>
         {% endif %}
         <div class="p-4">
-          <h3>
+          <h3 class="mb-2">
             <a href="{{ post.url | url }}">
               {{ post.data.title | default('Untitled') }}
             </a>
           </h3>
-          <div class="text-base leading-6 text-gray-500 mb-3 flex flex-wrap gap-6 md:gap-6 border-b pb-2">
-            <span class="font-bold">${{post.data.price}}</span>
-            {% if post.data.miles %}<span class="font-bold"> {{ post.data.miles }} miles</span>{% endif %}
-            {% if post.date  %}<span class="font-medium">{{ post.date | readableDate }}</span>{% endif %}
+          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
+            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
+          </div>
+          <div class="text-base leading-6 text-gray-500 mb-3 border-b pb-2">
+            {% if post.date %}<span class="font-medium">{{ post.date | readableDate }}</span>{% endif %}
           </div>
           {% if post.data.description %}
           <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
@@ -72,14 +74,18 @@ title: Vehicle Inventory
         </a>
         {% endif %}
         <div class="p-4">
-          <h3>
+          <h3 class="mb-2">
             <a href="{{ post.url | url }}">
               {{ post.data.title | default('Untitled') }}
             </a>
           </h3>
-          <p class="text-base leading-6 text-gray-500 mb-3">
-            {{ post.date | readableDate }}
-          </p>
+          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
+            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
+          </div>
+          <div class="text-base leading-6 text-gray-500 mb-3 border-b pb-2">
+            {% if post.date %}<span class="font-medium">{{ post.date | readableDate }}</span>{% endif %}
+          </div>
           {% if post.data.description %}
           <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
           {% endif %}
@@ -88,7 +94,7 @@ title: Vehicle Inventory
               href="{{ post.url | url }}"
               class="text-[#1E6CB0] font-bold text-lg"
             >
-              See details →
+              See Details →
             </a>
           </p>
         </div>
@@ -97,7 +103,7 @@ title: Vehicle Inventory
   </section>
 
   <section class="container my-8 px-6">
-    <h2 class="font-bold pt-12">$5000 - $10,000</h2>
+    <h2 class="pt-12">$5000 - $10,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}  {% if post.data.price >= 5000 and post.data.price < 10000 %}
       <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
@@ -111,14 +117,18 @@ title: Vehicle Inventory
         </a>
         {% endif %}
         <div class="p-4">
-          <h3>
+          <h3 class="mb-2">
             <a href="{{ post.url | url }}">
               {{ post.data.title | default('Untitled') }}
             </a>
           </h3>
-          <p class="text-base leading-6 text-gray-500 mb-3">
-          {{ post.date | readableDate }}
-          </p>
+          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
+            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
+          </div>
+          <div class="text-base leading-6 text-gray-500 mb-3 border-b pb-2">
+            {% if post.date %}<span class="font-medium">{{ post.date | readableDate }}</span>{% endif %}
+          </div>
           {% if post.data.description %}
           <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
           {% endif %}
@@ -127,7 +137,7 @@ title: Vehicle Inventory
               href="{{ post.url | url }}"
               class="text-[#1E6CB0] font-bold text-lg"
             >
-              See details →
+              See Details →
             </a>
           </p>
         </div>
@@ -136,7 +146,7 @@ title: Vehicle Inventory
   </section>
 
   <section class="container my-8 px-6">
-    <h2 class="font-bold pt-12">$10,000 - $15,000</h2>
+    <h2 class="pt-12">$10,000 - $15,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}  {% if post.data.price >= 10000 and post.data.price < 15000 %}
       <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
@@ -150,14 +160,18 @@ title: Vehicle Inventory
         </a>
         {% endif %}
         <div class="p-4">
-          <h3>
+          <h3 class="mb-2">
             <a href="{{ post.url | url }}">
               {{ post.data.title | default('Untitled') }}
             </a>
           </h3>
-          <p class="text-base leading-6 text-gray-500 mb-3">
-          {{ post.date | readableDate }}
-          </p>
+          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
+            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
+          </div>
+          <div class="text-base leading-6 text-gray-500 mb-3 border-b pb-2">
+            {% if post.date %}<span class="font-medium">{{ post.date | readableDate }}</span>{% endif %}
+          </div>
           {% if post.data.description %}
           <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
           {% endif %}
@@ -166,7 +180,7 @@ title: Vehicle Inventory
               href="{{ post.url | url }}"
               class="text-[#1E6CB0] font-bold text-lg"
             >
-              See details →
+              See Details →
             </a>
           </p>
         </div>
@@ -189,14 +203,18 @@ title: Vehicle Inventory
         </a>
         {% endif %}
         <div class="p-4">
-          <h3>
+          <h3 class="mb-2">
             <a href="{{ post.url | url }}">
               {{ post.data.title | default('Untitled') }}
             </a>
           </h3>
-          <p class="text-base leading-6 text-gray-500 mb-3">
-         {{ post.date | readableDate }}
-          </p>
+          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
+            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
+          </div>
+          <div class="text-base leading-6 text-gray-500 mb-3 border-b pb-2">
+            {% if post.date %}<span class="font-medium">{{ post.date | readableDate }}</span>{% endif %}
+          </div>
           {% if post.data.description %}
           <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
           {% endif %}
@@ -205,7 +223,7 @@ title: Vehicle Inventory
               href="{{ post.url | url }}"
               class="text-[#1E6CB0] font-bold text-lg"
             >
-              See details →
+              See Details →
             </a>
           </p>
         </div>
@@ -228,14 +246,18 @@ title: Vehicle Inventory
         </a>
         {% endif %}
         <div class="p-4">
-          <h3>
+          <h3 class="mb-2">
             <a href="{{ post.url | url }}">
               {{ post.data.title | default('Untitled') }}
             </a>
           </h3>
-          <p class="text-base leading-6 text-gray-500 mb-3">
-         {{ post.date | readableDate }}
-          </p>
+          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
+            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
+          </div>
+          <div class="text-base leading-6 text-gray-500 mb-3 border-b pb-2">
+            {% if post.date %}<span class="font-medium">{{ post.date | readableDate }}</span>{% endif %}
+          </div>
           {% if post.data.description %}
           <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
           {% endif %}
@@ -244,7 +266,7 @@ title: Vehicle Inventory
               href="{{ post.url | url }}"
               class="text-[#1E6CB0] font-bold text-lg"
             >
-              See details →
+              See Details →
             </a>
           </p>
         </div>
