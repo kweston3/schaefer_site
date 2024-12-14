@@ -12,72 +12,8 @@ layout: default
     </div>
   </section>
 
-  <!-- Thank You Section -->
-  <section class="my-4 bg-white">
-    <div class="container mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <!-- Left: Thank You Message -->
-      <div>
-        <h2>Thank you to all our satisfied customers!</h2>
-        <p class="mt-2">
-          If you would like to leave a review - Fill out the form with your name
-          and message, and we will post it on the website!
-        </p>
-      </div>
-
-      <!-- Right: Form -->
-      <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-        <form
-          method="POST"
-          action="/thank-you"
-          netlify
-          class="grid grid-cols-1 gap-4"
-        >
-          <!-- Name Field -->
-          <div>
-            <label for="name" class="block text-gray-700 font-semibold"
-              >Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="Your Name"
-              class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <!-- Message Field -->
-          <div>
-            <label for="message" class="block text-gray-700 font-semibold"
-              >Message</label
-            >
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows="3"
-              placeholder="Type your review here..."
-              class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
-            ></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="text-center">
-            <button
-              type="submit"
-              class="px-6 py-3 bg-[#1E6CB0] text-white font-semibold rounded-lg hover:bg-blue-600"
-            >
-              Submit Review
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
   <!-- Testimonials Section -->
-  <section class="my-16">
+  <section class="my-12">
     <h2 class="text-center">What Our Customers Say</h2>
     <p class="text-center mt-2">Hear from satisfied customers.</p>
     <div
@@ -142,6 +78,76 @@ layout: default
           for a nice and affordable used car."
         </p>
         <h4 class="mt-4">- Briana</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thank You Section -->
+  <section class="my-4 bg-white">
+    <div class="container mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Left: Thank You Message -->
+      <div>
+        <h2>Thank you to all our satisfied customers!</h2>
+        <p class="mt-6">
+          We are proud to have earned the trust and satisfaction of so many
+          wonderful customers. Your support means the world to us, and we’re
+          grateful for the opportunity to help you find the perfect vehicle.
+        </p>
+        <p class="mt-6">
+          If you’d like to share your experience, we’d love to hear from you!
+          Simply fill out the form with your name and message, and we’ll be
+          happy to post your review on our website.
+        </p>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <form
+          method="POST"
+          action="/thank-you"
+          netlify
+          class="grid grid-cols-1 gap-4"
+        >
+          <!-- Name Field -->
+          <div>
+            <label for="name" class="block text-gray-700 font-semibold"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Your Name"
+              class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Message Field -->
+          <div>
+            <label for="message" class="block text-gray-700 font-semibold"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="3"
+              placeholder="Type your review here..."
+              class="mt-2 w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="px-6 py-3 bg-[#1E6CB0] text-white font-semibold rounded-lg hover:bg-blue-600"
+            >
+              Submit Review
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
