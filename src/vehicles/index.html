@@ -8,12 +8,12 @@ title: Vehicle Inventory
     class="flex flex-col justify-center items-center text-center relative w-full h-[150px] md:h-[250px] bg-[#1E6CB0] bg-cover bg-center"
   >
     <div class="relative z-10 px-4 md:px-0">
-      <h1 class="text-white">{{title}}</h1>
+      <h1>{{title}}</h1>
     </div>
   </section>
 
   <!-- Featured Inventory Section -->
-  <section class="container my-8 px-6">
+  <section class="container mt-8 px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}
       {% if loop.index <= 6 %}
@@ -59,7 +59,7 @@ title: Vehicle Inventory
   </section>
   
 
-  <section class="container my-8 px-6">
+  <section class="container mt-8 px-6">
     <h2 class="font-bold pt-12">$5000 or less</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %} {% if post.data.price < 5000 %}
@@ -102,7 +102,7 @@ title: Vehicle Inventory
       {% endif %} {% endfor %}
   </section>
 
-  <section class="container my-8 px-6">
+  <section class="container mt-8 px-6">
     <h2 class="pt-12">$5000 - $10,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}  {% if post.data.price >= 5000 and post.data.price < 10000 %}
@@ -145,7 +145,7 @@ title: Vehicle Inventory
       {% endif %} {% endfor %}
   </section>
 
-  <section class="container my-8 px-6">
+  <section class="container mt-8 px-6">
     <h2 class="pt-12">$10,000 - $15,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}  {% if post.data.price >= 10000 and post.data.price < 15000 %}
@@ -188,7 +188,7 @@ title: Vehicle Inventory
       {% endif %} {% endfor %}
   </section>
 
-  <section class="container my-8 px-6">
+  <section class="container mt-8 px-6">
     <h2 class="pt-12">$15,000 - $20,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}  {% if post.data.price >= 15000 and post.data.price < 20000 %}
@@ -231,7 +231,7 @@ title: Vehicle Inventory
       {% endif %} {% endfor %}
   </section>
 
-  <section class="container my-8 px-6">
+  <section class="container mt-8 px-6">
     <h2 class="pt-12">$20,000 - $25,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}  {% if post.data.price >= 20000 and post.data.price < 25000 %}
@@ -274,7 +274,7 @@ title: Vehicle Inventory
       {% endif %} {% endfor %}
   </section>
 
-  <section class="container my-8 px-6">
+  <section class="container mt-8 px-6">
     <h2 class="pt-12">$25,000 or more</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {% for post in collections.post | reverse %}  {% if post.data.price >= 25000  %}
