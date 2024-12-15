@@ -1,8 +1,40 @@
-<footer class="bottom-0 text-center w-full py-4">
-  <small class="text-gray-500"
-    >Copyright © {{settings.name}} 2024. Made by
-    <a href="{{settings.url}}" target="_blank" class="underline"
-      >Kaleb Weston</a
-    >
-  </small>
+<footer class="bg-[#1E6CB0] text-white py-6">
+  <div
+    class="container mx-auto px-6 flex flex-col md:flex-row space-y-6 md:space-y-0 mb-12"
+  >
+    <!-- Logo and Text -->
+    <div class="flex flex-col items-start md:w-1/3 space-y-2">
+      <img
+        src="../../static/img/logos/schaefer-auto-white.png"
+        alt="Schaefer Auto Logo"
+        class="w-36 h-auto mb-2"
+      />
+      <p class="text-white">
+        Your trusted auto dealer since 2021. Quality vehicles and exceptional
+        service.
+      </p>
+    </div>
+
+    <!-- Links and Contact -->
+    <div class="flex-1">
+      <!-- Top Row -->
+      <div class="flex items-center space-x-12 mb-4 flex-wrap justify-end">
+        <a href="../../vehicles/index.html" class="hover:underline">Vehicles</a>
+        <a href="../../services/index.html" class="hover:underline">Services</a>
+        <a href="../../testimonials/index.html" class="hover:underline"
+          >Testimonials</a
+        >
+        <a href="../../about/index.html" class="hover:underline">About</a>
+        <a href="../../contact/index.html" class="hover:underline">Contact</a>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="flex items-center space-x-12 flex-wrap justify-end">
+        <p>(555) 555-5555</p>
+        <p>&copy; 2024 Schaefer Auto</p>
+        <p>Made by Kaleb Weston</p>
+        <a href="#privacy-policy" class="hover:underline">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
 </footer>
