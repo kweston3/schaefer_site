@@ -1,0 +1,38 @@
+<div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
+  {% if post.data.image %}
+  <a href="{{ post.url | url }}">
+    <img
+      src="{{ post.data.image }}"
+      alt="{{ post.data.title | default('Vehicle Image') }}"
+      class="w-full h-64 object-cover"
+    />
+  </a>
+  {% endif %}
+  <div class="p-4">
+    <h3 class="mb-2">
+      <a href="{{ post.url | url }}">
+        {{ post.data.title | default('Untitled') }}
+      </a>
+    </h3>
+    <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
+      {% if post.data.price %}<span class="font-bold"
+        >${{ post.data.price }}</span
+      >{% endif %} {% if post.data.miles %}<span class="font-bold"
+        >{{ post.data.miles }} miles</span
+      >{% endif %}
+    </div>
+    <div class="text-xs text-gray-500 mb-3 border-b pb-2">
+      {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
+    </div>
+    {% if post.data.description %}
+    <p class="mb-3">
+      {{ post.data.description.split(' ').slice(0, 20).join(' ') }}..
+    </p>
+    {% endif %}
+    <p>
+      <a href="{{ post.url | url }}" class="text-[#1E6CB0] font-bold text-lg">
+        See Details →
+      </a>
+    </p>
+  </div>
+</div>

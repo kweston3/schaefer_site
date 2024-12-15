@@ -15,305 +15,61 @@ title: Vehicle Inventory
   <!-- Featured Inventory Section -->
   <section class="container mt-8 px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}
-      {% if loop.index <= 6 %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <a href="{{ post.url | url }}">
-          <img
-            src="{{ post.data.image }}"
-            alt="{{ post.data.title | default('Vehicle Image') }}"
-            class="w-full h-64 object-cover"
-          />
-        </a>
-        {% endif %}
-        <div class="p-4">
-          <h3 class="mb-2">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-          </div>
-          <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-            {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-          </div>
-          {% if post.data.description %}
-          <p class="mb-3">{{ post.data.description.split(' ').slice(0, 20).join(' ') }}..</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-[#1E6CB0] font-bold text-lg"
-            >
-              See Details →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %}
-      {% endfor %}
+      {% for post in collections.post | reverse %} {% if loop.index <= 6 %} {%
+      include "partials/vehicle-section.html" %} {% endif %} {% endfor %}
     </div>
   </section>
-  
 
   <section class="container mt-8 px-6">
     <h2 class="font-bold pt-12">$5000 or less</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if post.data.price < 5000 %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <a href="{{ post.url | url }}">
-          <img
-            src="{{ post.data.image }}"
-            alt="{{ post.data.title | default('Vehicle Image') }}"
-            class="w-full h-64 object-cover"
-          />
-        </a>
-        {% endif %}
-        <div class="p-4">
-          <h3 class="mb-2">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-          </div>
-          <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-            {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-          </div>
-          {% if post.data.description %}
-          <p class="mb-3">{{ post.data.description.split(' ').slice(0, 20).join(' ') }}..</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-[#1E6CB0] font-bold text-lg"
-            >
-              See Details →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
+      {% for post in collections.post | reverse %} {% if post.data.price < 5000
+      %} {% include "partials/vehicle-section.html" %} {% endif %} {% endfor %}
+    </div>
   </section>
 
   <section class="container mt-8 px-6">
-    <h2 class="pt-12">$5000 - $10,000</h2>
+    <h2 class="font-bold pt-12">$5000 - $10,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}  {% if post.data.price >= 5000 and post.data.price < 10000 %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <a href="{{ post.url | url }}">
-          <img
-            src="{{ post.data.image }}"
-            alt="{{ post.data.title | default('Vehicle Image') }}"
-            class="w-full h-64 object-cover"
-          />
-        </a>
-        {% endif %}
-        <div class="p-4">
-          <h3 class="mb-2">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-          </div>
-          <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-            {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-          </div>
-          {% if post.data.description %}
-          <p class="mb-3">{{ post.data.description.split(' ').slice(0, 20).join(' ') }}..</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-[#1E6CB0] font-bold text-lg"
-            >
-              See Details →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
+      {% for post in collections.post | reverse %} {% if post.data.price >= 5000
+      and post.data.price < 10000 %} {% include "partials/vehicle-section.html"
+      %} {% endif %} {% endfor %}
+    </div>
   </section>
 
   <section class="container mt-8 px-6">
-    <h2 class="pt-12">$10,000 - $15,000</h2>
+    <h2 class="font-bold pt-12">$10,000 - $15,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}  {% if post.data.price >= 10000 and post.data.price < 15000 %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <a href="{{ post.url | url }}">
-          <img
-            src="{{ post.data.image }}"
-            alt="{{ post.data.title | default('Vehicle Image') }}"
-            class="w-full h-64 object-cover"
-          />
-        </a>
-        {% endif %}
-        <div class="p-4">
-          <h3 class="mb-2">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-          </div>
-          <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-            {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-          </div>
-          {% if post.data.description %}
-          <p class="mb-3">{{ post.data.description.split(' ').slice(0, 20).join(' ') }}..</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-[#1E6CB0] font-bold text-lg"
-            >
-              See Details →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
+      {% for post in collections.post | reverse %} {% if post.data.price >=
+      10000 and post.data.price < 15000 %} {% include
+      "partials/vehicle-section.html" %} {% endif %} {% endfor %}
+    </div>
   </section>
 
   <section class="container mt-8 px-6">
-    <h2 class="pt-12">$15,000 - $20,000</h2>
+    <h2 class="font-bold pt-12">$15,000 - $20,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}  {% if post.data.price >= 15000 and post.data.price < 20000 %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <a href="{{ post.url | url }}">
-          <img
-            src="{{ post.data.image }}"
-            alt="{{ post.data.title | default('Vehicle Image') }}"
-            class="w-full h-64 object-cover"
-          />
-        </a>
-        {% endif %}
-        <div class="p-4">
-          <h3 class="mb-2">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-          </div>
-          <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-            {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-          </div>
-          {% if post.data.description %}
-          <p class="mb-3">{{ post.data.description.split(' ').slice(0, 20).join(' ') }}..</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-[#1E6CB0] font-bold text-lg"
-            >
-              See Details →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
+      {% for post in collections.post | reverse %} {% if post.data.price >=
+      15000 and post.data.price < 20000 %} {% include
+      "partials/vehicle-section.html" %} {% endif %} {% endfor %}
+    </div>
   </section>
 
   <section class="container mt-8 px-6">
-    <h2 class="pt-12">$20,000 - $25,000</h2>
+    <h2 class="font-bold pt-12">$20,000 - $25,000</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}  {% if post.data.price >= 20000 and post.data.price < 25000 %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <a href="{{ post.url | url }}">
-          <img
-            src="{{ post.data.image }}"
-            alt="{{ post.data.title | default('Vehicle Image') }}"
-            class="w-full h-64 object-cover"
-          />
-        </a>
-        {% endif %}
-        <div class="p-4">
-          <h3 class="mb-2">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-          </div>
-          <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-            {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-          </div>
-          {% if post.data.description %}
-          <p class="mb-3">{{ post.data.description.split(' ').slice(0, 20).join(' ') }}..</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-[#1E6CB0] font-bold text-lg"
-            >
-              See Details →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
+      {% for post in collections.post | reverse %} {% if post.data.price >=
+      20000 and post.data.price < 25000 %} {% include
+      "partials/vehicle-section.html" %} {% endif %} {% endfor %}
+    </div>
   </section>
 
   <section class="container mt-8 px-6">
-    <h2 class="pt-12">$25,000 or more</h2>
+    <h2 class="font-bold pt-12">$25,000 or more</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}  {% if post.data.price >= 25000  %}
-      <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-        {% if post.data.image %}
-        <a href="{{ post.url | url }}">
-          <img
-            src="{{ post.data.image }}"
-            alt="{{ post.data.title | default('Vehicle Image') }}"
-            class="w-full h-64 object-cover"
-          />
-        </a>
-        {% endif %}
-        <div class="p-4">
-          <h3 class="mb-2">
-            <a href="{{ post.url | url }}">
-              {{ post.data.title | default('Untitled') }}
-            </a>
-          </h3>
-          <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-            {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-            {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-          </div>
-          <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-            {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-          </div>
-          {% if post.data.description %}
-          <p class="mb-3">{{ post.data.description.split(' ').slice(0, 20).join(' ') }}..</p>
-          {% endif %}
-          <p>
-            <a
-              href="{{ post.url | url }}"
-              class="text-[#1E6CB0] font-bold text-lg"
-            >
-              See Details →
-            </a>
-          </p>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
+      {% for post in collections.post | reverse %} {% if post.data.price >=
+      25000 %} {% include "partials/vehicle-section.html" %} {% endif %} {%
+      endfor %}
+    </div>
   </section>
 </div>

@@ -41,51 +41,18 @@ path: home
 </section>
 
 
+
 <!-- Featured Inventory Section -->
 <section class="container mt-10 px-6">
   <h2 class="text-left">Featured Inventory</h2>
   <p class="text-left mt-2">Check out our latest vehicles.</p>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-    {% for post in collections.post | reverse %} {% if loop.index <= 6 %}
-    <div class="border rounded-lg overflow-hidden shadow-md hover:shadow-lg">
-      {% if post.data.image %}
-      <a href="{{ post.url | url }}">
-        <img
-          src="{{ post.data.image }}"
-          alt="{{ post.data.title | default('Vehicle Image') }}"
-          class="w-full h-64 object-cover"
-        />
-      </a>
-      {% endif %}
-      <div class="p-4">
-        <h3 class="mb-2">
-          <a href="{{ post.url | url }}">
-            {{ post.data.title | default('Untitled') }}
-          </a>
-        </h3>
-        <div class="text-gray-500 mb-4 flex flex-wrap gap-8">
-          {% if post.data.price %}<span class="font-bold">${{ post.data.price }}</span>{% endif %}
-          {% if post.data.miles %}<span class="font-bold">{{ post.data.miles }} miles</span>{% endif %}
-        </div>
-        <div class="text-xs text-gray-500 mb-3 border-b pb-2">
-          {% if post.date %}<span>{{ post.date | readableDate }}</span>{% endif %}
-        </div>
-        {% if post.data.description %}
-        <p class="mb-3">{{ post.data.description.split(' ').slice(0, 25).join(' ') }}..</p>
-        {% endif %}
-        <p>
-          <a
-            href="{{ post.url | url }}"
-            class="text-[#1E6CB0] font-bold text-lg"
-          >
-            See Details →
-          </a>
-        </p>
-      </div>
-    </div>
-    {% endif %} {% endfor %}
+    {% for post in collections.post | reverse %} {% if loop.index <= 6 %} {%
+    include "partials/vehicle-section.html" %} {% endif %} {% endfor %}
+  </div>
+</section>
 
-    <div class="col-span-full flex justify-center">
+    <div class="col-span-full flex justify-center mt-8">
       <a
         href="/vehicles"
         class="px-6 py-3 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-blue-600"
