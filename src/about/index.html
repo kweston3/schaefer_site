@@ -11,11 +11,13 @@ layout: default
       <h1 class="text-4xl md:text-6xl font-bold text-white">{{title}}</h1>
     </div>
   </section>
-  <section class="my-20 bg-gray-100 p-8">
-    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+
+  <section class="pt-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Left Side: Contact Info -->
       <div class="flex flex-col justify-center">
-        <h2>About Us</h2>
-        <p class="mt-4 text-gray-700">
+        <h2 class="mb-4">Who we are</h2>
+        <p class="text-gray-600 mb-8">
           Located in Lomira, Wisconsin, Schaefer Auto is a used vehicle
           dealership. It has become our mission to provide reliable vehicles for
           a price point you cannot beat. We take pride in providing a wide
@@ -24,13 +26,128 @@ layout: default
           you are not seeing the vehicle you had in mind, don’t worry. We will
           work with you to provide exactly what you are looking for.
         </p>
+
+        <p class="text-gray-600 mb-8">
+          We understand purchasing a vehicle can be stressful; to mitigate this,
+          we welcome you to visit Schaefer Auto for your next vehicle purchase.
+          We will work to find a vehicle made best suited for you, while
+          providing a prompt and painless experience. We have proudly been
+          serving both the local community and surrounding states since 2021.
+        </p>
       </div>
-      <div class="flex justify-center items-center">
+
+      <!-- Right Side: Owner's Image -->
+      <div class="flex justify-center md:justify-end items-center">
         <img
-          src="./static/img/about/schaefer-auto10.jpeg"
-          alt="Our Team"
-          class="w-full h-96 object-cover rounded-lg shadow-lg"
+          src="../static/img/about/schaefer-auto11.jpeg"
+          alt="Caleb Schaefer"
+          class="lg:w-5/6 w-full h-96 object-cover rounded-lg shadow-lg"
         />
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-16 bg-gray-100">
+    <div class="container mx-auto px-6 py-8">
+      <!-- Section Title -->
+      <div class="mb-16 text-center">
+        <h2>Meet the Team</h2>
+        <p class="text-gray-700 mt-2">
+          We are an experienced team looking to help you!
+        </p>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        <!-- Team Member 1 -->
+        <div class="flex flex-col items-center text-center">
+          <img
+            src="../static/img/employees/caleb-schaefer.jpg"
+            alt="Member 1"
+            class="w-40 h-40 object-cover rounded-full mb-4"
+          />
+          <h3 class="mb-0">Caleb Schaefer</h3>
+          <h4 class="text-[#1E6CB0] font-medium">Owner</h4>
+
+          <p class="text-gray-600">
+            Schaefer Auto originated from Caleb’s passion for “flipping”
+            vehicles, ATV’s, boats, trailers, etc. He has continued to grow the
+            business on his own, while remaining hands on. Caleb works to ensure
+            the vehicle inventory is always abundant and diverse, provides
+            communication with customers during their vehicle search, and
+            facilitates vehicle sales.
+          </p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="flex flex-col items-center text-center">
+          <img
+            src="../static/img/employees/roman.jpg"
+            alt="Member 2"
+            class="w-40 h-40 object-cover rounded-full mb-4"
+          />
+          <h3 class="mb-0">Roman</h3>
+          <h4 class="text-[#1E6CB0] font-medium">Auto Technician</h4>
+          <p class="text-gray-600">
+            Roman was the first addition to Schaefer Auto. He joined us with
+            education from the Universal Technical Institute in automotive
+            technician training. Prior to joining our team, he had multiple
+            years of experience working for a local dealership and service shop,
+            where he focused primarily on GM and Ford vehicles.
+          </p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="flex flex-col items-center text-center">
+          <img
+            src="../static/img/employees/randy.jpg"
+            alt="Member 3"
+            class="w-40 h-40 object-cover rounded-full mb-4"
+          />
+          <h3 class="mb-0">Randy</h3>
+          <h4 class="text-[#1E6CB0] font-medium">Auto Technician</h4>
+
+          <p class="text-gray-600">
+            Randy has immense experience in the automotive industry. He is an
+            important part of the team, applying his almost 30 years, as both an
+            auto technician and in a management role.
+          </p>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="flex flex-col items-center text-center">
+          <img
+            src="../static/img/employees/holly.jpg"
+            alt="Member 4"
+            class="w-40 h-40 object-cover rounded-full mb-4"
+          />
+          <h3 class="mb-0">Holly</h3>
+          <h4 class="text-[#1E6CB0] font-medium">Office Associate</h4>
+
+          <p class="text-gray-600">
+            Holly handles an assortment of responsibilities to ensure your
+            purchase experience is exceptional. She works to handle customer
+            inquiries, assists in vehicle transactions, and bookkeeping. Holly
+            has worked in the automotive industry for numerous years, detailing
+            and tinting vehicles. Holly attended Detroit Tint Studio, and
+            provides window tinting services to both our customers and the
+            general public.
+          </p>
+        </div>
+
+        <!-- Team Member 5 -->
+        <div class="flex flex-col items-center text-center">
+          <img
+            src="../static/img/employees/sage.jpg"
+            alt="Member 5"
+            class="w-40 h-40 object-cover rounded-full mb-4"
+          />
+          <h3 class="mb-0">Sage</h3>
+          <p class="text-gray-600">
+            Sage has been with us since he was 8 weeks old. He spends many of
+            his days at our shop and loves to greet every customer that visits!
+          </p>
+        </div>
       </div>
     </div>
   </section>
