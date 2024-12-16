@@ -9,7 +9,29 @@ title: Vehicle Inventory
   >
     <div class="relative z-10 px-4 md:px-0">
       <h1>{{title}}</h1>
-      <h1>ADD SEARCH FUNCTIONALITY</h1>
+    </div>
+  </section>
+
+  <section
+    class="flex flex-row justify-center items-center text-center relative bg-gray-100 bg-cover bg-center"
+  >
+    <div class="relative z-10 px-4 py-6 md:px-0 w-full max-w-lg">
+      <h2 class="mb-4">Search For Your Next Ride</h2>
+      <!-- Search Form -->
+      <form id="searchForm" class="flex items-center flex-nowrap w-full">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter make, model, or keyword"
+          class="flex-grow p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          type="submit"
+          class="p-2 bg-[#1E6CB0] text-white rounded-r-md hover:bg-blue-700 whitespace-nowrap"
+        >
+          Find
+        </button>
+      </form>
     </div>
   </section>
 
