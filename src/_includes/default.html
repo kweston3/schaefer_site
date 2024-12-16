@@ -5,14 +5,18 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% if path != "home" %}
-    <title>{{ title }} - Schaefer Auto</title>
+    <title>{{ title }} | Schaefer Auto</title>
     {% else %}
     <title>Schaefer Auto</title>
     {% endif %} {% if description %}
     <meta name="description" content="{{description}}" />
     {% endif %} {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
-    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="../static/img/logos/schaefer-auto.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     {% include "./partials/navbar.html" %} {{ content | safe }} {% include
