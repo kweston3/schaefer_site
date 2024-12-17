@@ -1,14 +1,20 @@
 ---
 testimonials:
-  - text: Home
-    url: "/"
-  - text: Vehicles
-    url: "/vehicles"
-  - text: Services
-    url: "/services"
-  - text: Reviews
-    url: "/reviews"
-  - text: About
-    url: "/about"
-  - text: Contact Us
-    url: "/contact"
+  - text: "Honest and reliable. Offered us the perfect car for a great price."
+    author: Natalie
+  - text: "Fantastic service! Very easy to work with and very courteous. Very knowledgeable."
+    author: Dakota
+  - text: "Caleb was friendly and helpful! Would recommend him to anyone looking for a nice and affordable used car."
+    author: Briana
+  - text: "We have bought a couple vehicles from Caleb and we were extremely pleased with both experiences!"
+    author: Steve
+  - text: "Amazing! Informative, honest, and helpful. Caleb won’t sell you a car that doesn’t match your needs."
+    author: Bruce
+  - text: "Excellent experience. Great service, fair pricing. Highly recommend."
+    author: Jillian
+  - text: "Caleb was very personal and there was no predator buy that truck and told me all the pros and cons. I will buy from him again."
+    author: Joe
+  - text: "Caleb was great to work with. Open honest and quick. Would suggest buying a car from him to anyone!"
+    author: Keith
+  - text: "Purchase went exactly how I expected! Very honest!!"
+    author: Kyle

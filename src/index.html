@@ -112,19 +112,18 @@ path: home
       What Our Customers Say
     </h2>
     <p class="text-center mt-2">Hear from satisfied customers.</p>
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div
+      class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+    >
+    {% for testimonial in reviews.testimonials %}
+    {% if loop.index <= 3 %}
       <div class="p-6 border rounded-lg bg-gray-100">
-        <p class="italic">"Honest and reliable. Offered us the perfect car for a great price."</p>
-        <h4 class="mt-4">- Natalie</h4>
+        <p class="italic">{{ testimonial.text }}</p>
+        <h4 class="mt-4">- {{ testimonial.author }}</h4>
       </div>
-      <div class="p-6 border rounded-lg bg-gray-100">
-        <p class="italic">"Fantastic service! Very easy to work with and very courteous. Very knowledgeable."</p>
-        <h4 class="mt-4">- Dakota</h4>
-      </div>
-      <div class="p-6 border rounded-lg bg-gray-100">
-        <p class="italic">"Caleb was friendly and helpful! Would recommend him to anyone looking for a nice and affordable used car."</p>
-        <h4 class="mt-4">- Briana</h4>
-      </div>
+    {% endif %}
+  {% endfor %}
+  
     </div>
     <div class="col-span-full flex justify-center mt-6">
       <a
