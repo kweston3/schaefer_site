@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://schaefer-auto.com/sitemap.xml
+Sitemap: https://schaefer-auto.app/sitemap.xml
