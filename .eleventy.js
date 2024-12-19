@@ -42,6 +42,8 @@ module.exports = function (eleventyConfig) {
   // Copy robots.txt to the output folder
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
+  eleventyConfig.addPassthroughCopy("./src/sitemap.xml");
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
