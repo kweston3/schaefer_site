@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://schaefer-auto.com</loc>
+      <loc>https://schaefer-auto.app</loc>
       <lastmod>2024-12-19</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://schaefer-auto.com/vehicles/</loc>
+      <loc>https://schaefer-auto.app/vehicles/</loc>
       <lastmod>2024-12-19</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://schaefer-auto.com/services/</loc>
+      <loc>https://schaefer-auto.app/services/</loc>
       <lastmod>2024-12-19</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://schaefer-auto.com/about/</loc>
+      <loc>https://schaefer-auto.app/about/</loc>
       <lastmod>2024-12-19</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url> 
    <url>
-      <loc>https://schaefer-auto.com/reviews/</loc>
+      <loc>https://schaefer-auto.app/reviews/</loc>
       <lastmod>2024-12-19</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>https://schaefer-auto.com/contact/</loc>
+      <loc>https://schaefer-auto.app/contact/</loc>
       <lastmod>2024-12-19</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
