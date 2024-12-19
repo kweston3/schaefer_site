@@ -39,6 +39,9 @@ module.exports = function (eleventyConfig) {
     "./src/static/js/index.js": "./static/js/index.js",
   });
 
+  // Copy robots.txt to the output folder
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
