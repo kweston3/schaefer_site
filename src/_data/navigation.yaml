@@ -2,13 +2,11 @@
 items:
   - text: Home
     url: "/"
-  - text: Vehicles
+  - text: Shop Vehicles
     url: "/vehicles"
-  - text: Services
-    url: "/services"
+  - text: About Us
+    url: "/about"
   - text: Reviews
     url: "/reviews"
-  - text: About
-    url: "/about"
   - text: Contact Us
     url: "/contact"
