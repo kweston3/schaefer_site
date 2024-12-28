@@ -20,11 +20,11 @@ path: home
     >
       Located in Lomira, Wisconsin, we’re dedicated to helping you drive away in the ideal vehicle at a price that fits your budget.
     </p>
-    <div class="mt-8 space-x-4">
+    <div class="mt-10 space-x-4">
       <!-- First Button: View Inventory (Solid Blue) -->
       <a
         href="/vehicles"
-        class="px-6 py-3 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789]"
+        class="px-6 py-3 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789] font-bold"
       >
         View Inventory
       </a>
@@ -32,7 +32,7 @@ path: home
       <!-- Second Button: Contact Us (Outlined Blue) -->
       <a
         href="/contact"
-        class="px-6 py-3 bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789]"
+        class="px-6 py-3 bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789] font-bold"
       >
         Contact Us
       </a>
@@ -55,54 +55,45 @@ path: home
     <div class="col-span-full flex justify-center mt-8">
       <a
         href="/vehicles"
-        class="px-6 py-3 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789]"
+        class="px-8 py-4 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789] font-bold"
       >
         View All Vehicles
       </a>
     </div>
   </section>
 
-
-  <!-- Services Section -->
-  <section class="mt-16 bg-[#1E6CB0]">
-    <div class="container p-6 rounded-lg">
-      <h2 class="text-center text-white">
-        Our Services
-      </h2>
-      <p class="text-center mt-2 text-white">
-        From financing to vehicle maintenance, we’ve got you covered.
+  <!-- About Section -->
+<section class="mt-16 bg-[#1E6CB0]">
+  <div class="container mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="flex flex-col justify-center">
+      <h2 class="text-white">Welcome to Schaefer Auto</h2>
+      <p class="mt-4 text-white">
+        Located in Lomira, Wisconsin, Schaefer Auto is a used vehicle
+        dealership. It has become our mission to provide reliable vehicles for
+        a price point you cannot beat. We take pride in providing a wide
+        variety of vehicles with ranging makes, models, years, and mileage to
+        ensure you leave with a vehicle to fit both your needs and budget. If
+        you are not seeing the vehicle you had in mind, don’t worry. We will
+        work with you to provide exactly what you are looking for.
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        <div class="p-6 bg-white border rounded-lg hover:shadow-lg">
-          <h3>Service 1</h3>
-          <p class="mt-2">description</p>
-          <a
-            href="/"
-            class="text-[#1E6CB0] hover:underline mt-2 inline-block"
-            >Learn More</a
-          >
-        </div>
-        <div class="p-6 bg-white border rounded-lg hover:shadow-lg">
-          <h3>Service 2</h3>
-          <p class="mt-2">description</p>
-          <a
-            href="/"
-            class="text-[#1E6CB0] hover:underline mt-2 inline-block"
-            >Learn More</a
-          >
-        </div>
-        <div class="p-6 bg-white border rounded-lg hover:shadow-lg">
-          <h3>Service 3</h3>
-          <p class="mt-2">description</p>
-          <a
-            href="/"
-            class="text-[#1E6CB0] hover:underline mt-2 inline-block"
-            >Learn More</a
-          >
-        </div>
+      <div class="mt-6">
+        <a
+          href="/about"
+          class="px-6 py-3 border-2 border-white bg-white text-[#1E6CB0] rounded-lg hover:bg-[#155789] inline-block font-bold"
+        >
+          About Us
+        </a>
       </div>
     </div>
-  </section>
+    <div class="flex justify-center items-center">
+      <img
+        src="./static/img/employees/dog.jpg"
+        alt="Our Team"
+        class="w-full h-96 object-cover rounded-lg shadow-lg"
+      />
+    </div>
+  </div>
+</section>
   
 
 <!-- Testimonials Section -->
@@ -128,7 +119,7 @@ path: home
     <div class="col-span-full flex justify-center mt-6">
       <a
         href="/reviews"
-        class="px-6 py-3 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789]"
+        class="px-8 py-4 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789] font-bold"
       >
         View All Testimonials
       </a>
@@ -136,46 +127,9 @@ path: home
   </div>
 </section>
 
-
-
-<!-- About Section -->
-<section class="mt-12 bg-gray-100">
-  <div class="container mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-    <div class="flex flex-col justify-center">
-      <h2>About Us</h2>
-      <p class="mt-4 text-gray-700">
-        Located in Lomira, Wisconsin, Schaefer Auto is a used vehicle
-        dealership. It has become our mission to provide reliable vehicles for
-        a price point you cannot beat. We take pride in providing a wide
-        variety of vehicles with ranging makes, models, years, and mileage to
-        ensure you leave with a vehicle to fit both your needs and budget. If
-        you are not seeing the vehicle you had in mind, don’t worry. We will
-        work with you to provide exactly what you are looking for.
-      </p>
-      <div class="mt-4">
-        <a
-          href="/about"
-          class="px-6 py-3 border-2 border-white bg-[#1E6CB0] text-white rounded-lg hover:bg-[#155789] inline-block"
-        >
-          Learn More
-        </a>
-      </div>
-    </div>
-    <div class="flex justify-center items-center">
-      <img
-        src="./static/img/employees/dog.jpg"
-        alt="Our Team"
-        class="w-full h-96 object-cover rounded-lg shadow-lg"
-      />
-    </div>
-  </div>
-</section>
-
-
-
 <!-- Contact Section -->
-<section class="mt-8 mb-12 bg-white">
-  <div class="container mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+<section class="mt-12 bg-gray-100">
+  <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12">
     <!-- Left Side: Contact Info -->
     <div class="flex flex-col">
       <h2 class="mb-4">Contact Us Today</h2>
@@ -200,7 +154,7 @@ path: home
 
     <!-- Right Side: Contact Form -->
     <div class="flex justify-center items-center">
-      <div class="bg-gray-100 p-10 rounded-lg shadow-md w-full">
+      <div class="bg-[#1E6CB0] p-10 rounded-lg shadow-md w-full">
         <form
           method="POST"
           action="/thank-you"
@@ -209,7 +163,7 @@ path: home
         >
           <!-- Name Field -->
           <div>
-            <label for="name" class="block text-gray-700 font-semibold"
+            <label for="name" class="block text-white font-semibold"
               >Name</label
             >
             <input
@@ -224,7 +178,7 @@ path: home
 
           <!-- Email Field -->
           <div>
-            <label for="email" class="block text-gray-700 font-semibold"
+            <label for="email" class="block text-white font-semibold"
               >Email</label
             >
             <input
@@ -239,7 +193,7 @@ path: home
 
           <!-- Phone Field -->
           <div>
-            <label for="phone" class="block text-gray-700 font-semibold"
+            <label for="phone" class="block text-white font-semibold"
               >Phone</label
             >
             <input
@@ -253,7 +207,7 @@ path: home
 
           <!-- Message Field -->
           <div>
-            <label for="message" class="block text-gray-700 font-semibold"
+            <label for="message" class="block text-white font-semibold"
               >Message</label
             >
             <textarea
@@ -270,7 +224,7 @@ path: home
           <div class="text-center mt-4">
             <button
               type="submit"
-              class="px-8 py-4 bg-[#1E6CB0] text-white font-semibold rounded-lg hover:bg-[#155789]"
+              class="px-8 py-4 bg-white text-[#1E6CB0] font-bold rounded-lg hover:bg-[#155789]"
             >
               Send Message
             </button>
