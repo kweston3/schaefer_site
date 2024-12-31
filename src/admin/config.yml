@@ -30,6 +30,5 @@ collections:
       - { label: "Image 3", name: "image3", widget: "image", required: false }
       - label: "Additional Images"
         name: "additional_images"
-        widget: "list"
-        fields:
-          - { label: "Image", name: "image", widget: "image" }
+        widget: "file"
+        multiple: true
