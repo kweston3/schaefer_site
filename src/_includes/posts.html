@@ -44,27 +44,49 @@ layout: default
     </div>
   </div>
 
-  <div class="flex justify-center flex-wrap mt-16 gap-4">
+  <div class="flex justify-center flex-wrap mt-8 gap-4">
     {% if image1 %}
     <img
       src="{{ image1 }}"
       alt="Product image"
-      class="w-96 h-48 rounded-lg object-cover flex-grow"
+      class="max-w-128 h-48 rounded-lg object-cover flex-grow"
     />
     {% endif %} {% if image2 %}
     <img
       src="{{ image2 }}"
       alt="Product image"
-      class="w-96 h-48 rounded-lg object-cover flex-grow"
+      class="max-w-128 h-48 rounded-lg object-cover flex-grow"
     />
     {% endif %} {% if image3 %}
     <img
       src="{{ image3 }}"
       alt="Product image"
-      class="w-96 h-48 rounded-lg object-cover flex-grow"
+      class="max-w-128 h-48 rounded-lg object-cover flex-grow"
     />
-    {% endif %}
+    {% endif %}       
   </div>
+
+  {% if image4 %}
+  <div class="flex justify-center flex-wrap mt-4 gap-4">
+    <img
+      src="{{ image4 }}"
+      alt="Product image"
+      class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+    />
+    {% endif %} {% if image5 %}
+    <img
+      src="{{ image5 }}"
+      alt="Product image"
+      class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+    />
+    {% endif %} {% if image6 %}
+    <img
+      src="{{ image6 }}"
+      alt="Product image"
+      class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+    />   
+    {% endif %}     
+  </div>  
 </div>
 
 <!-- Contact Section -->
