@@ -5,6 +5,7 @@
       src="{{ post.data.image }}"
       alt="{{ post.data.title | default('Vehicle Image') }}"
       class="w-full h-64 object-cover"
+      loading="lazy"
     />
   </a>
   {% endif %}
