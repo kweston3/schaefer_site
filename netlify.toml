@@ -4,5 +4,10 @@
 
 [[redirects]]
   from = "/*"
-  to = "/404" 
+  to = "/404"
   status = 404
+
+[[redirects]]
+  from = "/static/img/:file"
+  to = "/.netlify/functions/image-cdn?url=/static/img/:file"
+  status = 200
