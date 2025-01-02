@@ -4,7 +4,7 @@ items:
     url: "/"
   - text: Shop Vehicles
     url: "/vehicles"
-  - text: Get Approved
+  - text: Financing
     url: "/financing"  
   - text: Reviews
     url: "/reviews"      
