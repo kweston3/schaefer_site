@@ -1,6 +1,6 @@
 ---
 title: 2014 Lincoln MKZ Hybrid
-price: 6300
+price: 6600
 miles: 151000
 date: 2024-12-31T22:53:22.317Z
 description: |-
