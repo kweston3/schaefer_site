@@ -5,10 +5,10 @@ items:
   - text: Shop Vehicles
     url: "/vehicles"
   - text: Get Approved
-    url: "/financing"    
-  - text: About Us
-    url: "/about"
+    url: "/financing"  
   - text: Reviews
-    url: "/reviews"
+    url: "/reviews"      
+  - text: About
+    url: "/about"
   - text: Contact Us
     url: "/contact"
