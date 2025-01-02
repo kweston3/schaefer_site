@@ -4,5 +4,12 @@
 
 [[redirects]]
   from = "/*"
-  to = "/404" 
+  to = "/404"
   status = 404
+
+[[plugins]]
+  package = "@netlify/plugin-image-optimizer"
+
+[plugins.inputs]
+  quality = 75
+  formats = ["jpeg", "png", "webp"]
