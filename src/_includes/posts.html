@@ -37,6 +37,7 @@ layout: default
         src="{{image}}"
         alt="Product Image"
         class="w-full h-96 rounded-lg object-cover"
+        loading="lazy"
       />
     </div>
     <div class="lg:w-2/3 md:w-1/2 md:ml-8 flex-grow">
@@ -50,18 +51,21 @@ layout: default
       src="{{ image1 }}"
       alt="Product image"
       class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+      loading="lazy"
     />
     {% endif %} {% if image2 %}
     <img
       src="{{ image2 }}"
       alt="Product image"
       class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+      loading="lazy"
     />
     {% endif %} {% if image3 %}
     <img
       src="{{ image3 }}"
       alt="Product image"
       class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+      loading="lazy"
     />
     {% endif %}       
   </div>
@@ -72,18 +76,21 @@ layout: default
       src="{{ image4 }}"
       alt="Product image"
       class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+      loading="lazy"
     />
     {% endif %} {% if image5 %}
     <img
       src="{{ image5 }}"
       alt="Product image"
       class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+      loading="lazy"
     />
     {% endif %} {% if image6 %}
     <img
       src="{{ image6 }}"
       alt="Product image"
       class="max-w-128 h-48 rounded-lg object-cover flex-grow"
+      loading="lazy"
     />   
     {% endif %}     
   </div>  
