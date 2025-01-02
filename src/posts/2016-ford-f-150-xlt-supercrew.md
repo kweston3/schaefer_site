@@ -1,18 +1,20 @@
 ---
-title: "2016 Ford F-150 XLT Supercrew "
 price: 18500
-miles: 147000
 date: 2024-12-31T03:27:09.382Z
+title: "2016 Ford F-150 XLT Supercrew "
+miles: 147000
 description: |-
   4x4 
 
-  sunroof 
+  Sunroof 
 
-  remote start 
+  Remote Start 
 
-  heated seats
-image: /static/img/uploads/img_5914.jpeg
-image1: /static/img/uploads/img_5916.jpeg
-image2: /static/img/uploads/img_5917.jpeg
-image3: /static/img/uploads/img_5915.jpeg
+  Heated Seats
+
+  Black Cloth Seats
+image: /static/img/uploads/f150.jpeg
+image1: ""
+image2: ""
+image3: ""
 ---
