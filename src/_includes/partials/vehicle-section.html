@@ -2,7 +2,7 @@
   {% if post.data.image %}
   <a href="{{ post.url | url }}">
     <img
-      src="{{ post.data.image }}"
+      src="{{ post.data.image }}?nf_resize=fit&fm=auto"
       alt="{{ post.data.title | default('Vehicle Image') }}"
       class="w-full h-64 object-cover"
       loading="lazy"
