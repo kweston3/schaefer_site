@@ -9,6 +9,10 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("./posts/*.md");
   });
 
+  eleventyConfig.addCollection("comingSoonVehicles", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/posts-coming-soon/*.md");
+  });
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
