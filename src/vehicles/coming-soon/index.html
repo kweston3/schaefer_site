@@ -35,11 +35,16 @@ title: Coming Soon
     </div>
   </section>
 
-  <!-- Coming Soon -->
-  <section class="container mt-12 mb-12 px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %}  {% include "partials/vehicle-section.html" %} {% endfor %}
-    </div>
-  </section>
+<!-- Coming Soon -->
+<section class="container mt-12 mb-12 px-6">
+  <h2 class="text-center text-2xl font-bold">Coming Soon</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if post.data.coming_soon == "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
 </div>
