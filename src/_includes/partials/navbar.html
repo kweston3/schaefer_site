@@ -66,7 +66,7 @@
         {% for item in navigation.items %}
         <li class="nav__item mr-2 relative">
           {% if loop.index == 2 %}
-         <!-- Dropdown Menu for Second Item -->
+      <!-- Dropdown Menu for Second Item -->
 <div
 @mouseover="isDropdownOpen = true"
 @mouseleave="isDropdownOpen = false"
@@ -80,7 +80,8 @@ class="relative"
 </a>
 <ul
   x-show="isDropdownOpen"
-  class="absolute lg:left-0 lg:top-full left-0 top-0 lg:w-36 w-full bg-white shadow-lg rounded-lg"
+  class="lg:absolute lg:left-0 lg:top-full left-0 lg:w-36 w-full bg-white shadow-lg rounded-lg lg:block hidden"
+  :class="{ 'block': isDropdownOpen, 'hidden': !isDropdownOpen }"
 >
   <li>
     <a
@@ -92,6 +93,7 @@ class="relative"
   </li>
 </ul>
 </div>
+
 
           {% elif loop.last %}
           <!-- Last item as a button -->
