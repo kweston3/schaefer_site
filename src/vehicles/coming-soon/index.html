@@ -35,11 +35,14 @@ title: Coming Soon
     </div>
   </section>
 
-  <!-- Coming Soon Section -->
-  <section class="container mt-12 mb-12 px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections["coming-soon-vehicles"] | reverse %}  {% include "partials/vehicle-section.html" %} {% endfor %}
-    </div>
-  </section>
+  {% if collections["coming-soon-vehicles"] %}
+  {% for post in collections["coming-soon-vehicles"] %}
+    <div>{{ post.data.title }}</div>
+  {% endfor %}
+{% else %}
+  <div>No vehicles available.</div>
+{% endif %}
+
+  
 
 </div>
