@@ -1,9 +1,9 @@
 <div class="lg:fixed top-0 w-full bg-white z-20 shadow-md">
   <nav
     class="flex items-center justify-center lg:justify-between flex-wrap p-4 px-4 mx-auto bg-white"
-    x-data="{ isOpen: false }"
-    @keydown.escape="isOpen = false"
-    @click.away="isOpen = false"
+    x-data="{ isOpen: false, isDropdownOpen: false }"
+    @keydown.escape="isOpen = false; isDropdownOpen = false"
+    @click.away="isOpen = false; isDropdownOpen = false"
   >
     <!-- Logo and Phone Number -->
     <div class="flex items-center space-x-4">
@@ -64,8 +64,36 @@
         class="pt-4 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
       >
         {% for item in navigation.items %}
-        <li class="nav__item mr-3">
-          {% if loop.last %}
+        <li class="nav__item mr-2 relative">
+          {% if loop.index == 2 %}
+         <!-- Dropdown Menu for Second Item -->
+<div
+@mouseover="isDropdownOpen = true"
+@mouseleave="isDropdownOpen = false"
+class="relative"
+>
+<a
+  class="text-ml inline-block no-underline py-2 px-4 hover:text-[#1E6CB0] {% if item.url == current_url %}text-[#1E6CB0] font-bold{% else %}text-gray-500{% endif %}"
+  href="{{ item.url }}"
+>
+  {{ item.text }} &#x25BE;
+</a>
+<ul
+  x-show="isDropdownOpen"
+  class="absolute lg:left-0 lg:top-full left-0 top-0 lg:w-36 w-full bg-white shadow-lg rounded-lg"
+>
+  <li>
+    <a
+      href="#"
+      class="block px-4 py-3 text-sm text-gray-700 hover:text-[#1E6CB0]"
+    >
+      Coming Soon
+    </a>
+  </li>
+</ul>
+</div>
+
+          {% elif loop.last %}
           <!-- Last item as a button -->
           <a
             @click="isOpen = false"
