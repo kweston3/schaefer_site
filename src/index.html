@@ -48,8 +48,11 @@ Located in Lomira, Wisconsin, Schaefer Auto is committed to helping you find the
   <h2>Featured Inventory</h2>
   <p class="text-left mt-2">Check out our latest vehicles.</p>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-    {% for post in collections.post | reverse %} {% if loop.index <= 6 %} {%
-    include "partials/vehicle-section.html" %} {% endif %} {% endfor %}
+    {% for post in collections.post | reverse %}
+      {% if loop.index <= 6 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
   </div>
 </section>
 
