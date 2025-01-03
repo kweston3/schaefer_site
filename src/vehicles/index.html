@@ -35,65 +35,81 @@ title: Vehicle Inventory
     </div>
   </section>
 
-  <!-- Featured Inventory Section -->
-  <section class="container mt-12 px-6">
-    <h2 class="font-bold">Latest Vehicles</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if loop.index <= 6 %} {%
-      include "partials/vehicle-section.html" %} {% endif %} {% endfor %}
-    </div>
-  </section>
+<!-- Featured Inventory Section -->
+<section class="container mt-12 px-6">
+  <h2 class="font-bold">Latest Vehicles</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if loop.index <= 6 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-  <section class="container mt-8 px-6">
-    <h2 class="font-bold pt-12">$5000 or less</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if post.data.price < 5000
-      %} {% include "partials/vehicle-section.html" %} {% endif %} {% endfor %}
-    </div>
-  </section>
+<section class="container mt-8 px-6">
+  <h2 class="font-bold pt-12">$5000 or less</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if post.data.price < 5000 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-  <section class="container mt-8 px-6">
-    <h2 class="font-bold pt-12">$5000 - $10,000</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if post.data.price >= 5000
-      and post.data.price < 10000 %} {% include "partials/vehicle-section.html"
-      %} {% endif %} {% endfor %}
-    </div>
-  </section>
+<section class="container mt-8 px-6">
+  <h2 class="font-bold pt-12">$5000 - $10,000</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if post.data.price >= 5000 and post.data.price < 10000 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-  <section class="container mt-8 px-6">
-    <h2 class="font-bold pt-12">$10,000 - $15,000</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if post.data.price >=
-      10000 and post.data.price < 15000 %} {% include
-      "partials/vehicle-section.html" %} {% endif %} {% endfor %}
-    </div>
-  </section>
+<section class="container mt-8 px-6">
+  <h2 class="font-bold pt-12">$10,000 - $15,000</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if post.data.price >= 10000 and post.data.price < 15000 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-  <section class="container mt-8 px-6">
-    <h2 class="font-bold pt-12">$15,000 - $20,000</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if post.data.price >=
-      15000 and post.data.price < 20000 %} {% include
-      "partials/vehicle-section.html" %} {% endif %} {% endfor %}
-    </div>
-  </section>
+<section class="container mt-8 px-6">
+  <h2 class="font-bold pt-12">$15,000 - $20,000</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if post.data.price >= 15000 and post.data.price < 20000 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-  <section class="container mt-8 px-6">
-    <h2 class="font-bold pt-12">$20,000 - $25,000</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if post.data.price >=
-      20000 and post.data.price < 25000 %} {% include
-      "partials/vehicle-section.html" %} {% endif %} {% endfor %}
-    </div>
-  </section>
+<section class="container mt-8 px-6">
+  <h2 class="font-bold pt-12">$20,000 - $25,000</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if post.data.price >= 20000 and post.data.price < 25000 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
-  <section class="container mt-8 mb-16 px-6">
-    <h2 class="font-bold pt-12">$25,000 or more</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {% for post in collections.post | reverse %} {% if post.data.price >=
-      25000 %} {% include "partials/vehicle-section.html" %} {% endif %} {%
-      endfor %}
-    </div>
-  </section>
+<section class="container mt-8 mb-16 px-6">
+  <h2 class="font-bold pt-12">$25,000 or more</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    {% for post in collections.post | reverse %}
+      {% if post.data.price >= 25000 and post.data.coming_soon != "Yes" %}
+        {% include "partials/vehicle-section.html" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 </div>
