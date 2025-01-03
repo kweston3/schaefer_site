@@ -31,7 +31,7 @@ collections:
       - { label: "Image 5", name: "image5", widget: "image", required: false }      
       - { label: "Image 6", name: "image6", widget: "image", required: false }      
 
-      - label: "Coming Soon Vehicles"
+      - label: "Coming Soon"
     name: "coming-soon-vehicles"
     folder: "src/posts-coming-soon"
     create: true
